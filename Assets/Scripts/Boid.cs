@@ -56,7 +56,7 @@ public class Boid : MonoBehaviour {
 
         if (target != null) {
             Vector3 offsetToTarget = (target.position - position);
-            acceleration = SteerTowards (offsetToTarget) * settings.targetWeight;
+            acceleration = SteerTowards(offsetToTarget) * settings.targetWeight;
         }
 
         if (numPerceivedFlockmates != 0) {
@@ -73,9 +73,10 @@ public class Boid : MonoBehaviour {
             acceleration += seperationForce;
         }
 
-        if (IsHeadingForCollision ()) {
-            Vector3 collisionAvoidDir = ObstacleRays ();
-            Vector3 collisionAvoidForce = SteerTowards (collisionAvoidDir) * settings.avoidCollisionWeight;
+        if (IsHeadingForCollision()) 
+        {
+            Vector3 collisionAvoidDir = ObstacleRays();
+            Vector3 collisionAvoidForce = SteerTowards(collisionAvoidDir) * settings.avoidCollisionWeight;
             acceleration += collisionAvoidForce;
         }
 
@@ -91,21 +92,25 @@ public class Boid : MonoBehaviour {
         forward = dir;
     }
 
-    bool IsHeadingForCollision () {
+    bool IsHeadingForCollision()
+    {
         RaycastHit hit;
-        if (Physics.SphereCast (position, settings.boundsRadius, forward, out hit, settings.collisionAvoidDst, settings.obstacleMask)) {
+        if (Physics.SphereCast(position, settings.boundsRadius, forward, out hit, settings.collisionAvoidDst, settings.obstacleMask)) 
+        {
             return true;
-        } else { }
+        }
         return false;
     }
 
-    Vector3 ObstacleRays () {
+    Vector3 ObstacleRays() {
         Vector3[] rayDirections = BoidHelper.directions;
 
-        for (int i = 0; i < rayDirections.Length; i++) {
-            Vector3 dir = cachedTransform.TransformDirection (rayDirections[i]);
+        for (int i = 0; i < rayDirections.Length; i++) 
+        {
+            Vector3 dir = cachedTransform.TransformDirection(rayDirections[i]);
             Ray ray = new Ray (position, dir);
-            if (!Physics.SphereCast (ray, settings.boundsRadius, settings.collisionAvoidDst, settings.obstacleMask)) {
+            if(!Physics.SphereCast(ray, settings.boundsRadius, settings.collisionAvoidDst, settings.obstacleMask)) 
+            {
                 return dir;
             }
         }
@@ -113,9 +118,10 @@ public class Boid : MonoBehaviour {
         return forward;
     }
 
-    Vector3 SteerTowards (Vector3 vector) {
+    Vector3 SteerTowards(Vector3 vector) 
+    {
         Vector3 v = vector.normalized * settings.maxSpeed - velocity;
-        return Vector3.ClampMagnitude (v, settings.maxSteerForce);
+        return Vector3.ClampMagnitude(v, settings.maxSteerForce);
     }
 
 }
