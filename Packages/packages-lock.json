@@ -1,5 +1,26 @@
 {
   "dependencies": {
+    "com.cysharp.yetanotherhttphandler": {
+      "version": "https://github.com/Cysharp/YetAnotherHttpHandler.git?path=src/YetAnotherHttpHandler#1.10.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "0eede4bf5bbbf7d6eb9cb63739c05bd69a6beaba"
+    },
+    "com.endel.nativewebsocket": {
+      "version": "https://github.com/endel/NativeWebSocket.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "1d8b49b3fee41c09a98141f1f1a5e4db47e14229"
+    },
+    "com.github-glitchenzo.nugetforunity": {
+      "version": "4.2.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.siccity.gltfutility": {
       "version": "https://github.com/siccity/gltfutility.git",
       "depth": 0,
@@ -27,11 +48,11 @@
       "depth": 2,
       "source": "registry",
       "dependencies": {
+        "com.unity.burst": "1.7.3",
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.mathematics": "1.1.0",
-        "com.unity.modules.uielements": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
-        "com.unity.burst": "1.7.3"
+        "com.unity.modules.uielements": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -166,15 +187,6 @@
         "com.unity.2d.tilemap.extras": "3.1.0"
       }
     },
-    "com.unity.ide.rider": {
-      "version": "3.0.21",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ext.nunit": "1.0.6"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.ide.visualstudio": {
       "version": "2.0.22",
       "depth": 0,
@@ -206,15 +218,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.purchasing": {
-      "version": "4.8.0",
+      "version": "4.12.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
-        "com.unity.services.core": "1.8.1",
+        "com.unity.services.core": "1.12.5",
         "com.unity.modules.androidjni": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.unityanalytics": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -260,7 +271,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
-      "version": "1.9.0",
+      "version": "1.12.5",
       "depth": 1,
       "source": "registry",
       "dependencies": {

@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 162
+  controlID: 102
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 20
+  controlID: 103
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 21
+  controlID: 55
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,25 +180,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PreferenceSettingsWindow
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1113
+    width: 1159
     height: 464
-  m_MinSize: {x: 311, y: 221}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 18}
   - {fileID: 19}
-  - {fileID: 17}
-  - {fileID: 15}
-  m_Selected: 3
-  m_LastSelected: 0
+  - {fileID: 20}
+  - {fileID: 18}
+  - {fileID: 16}
+  - {fileID: 14}
+  m_Selected: 1
+  m_LastSelected: 2
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,15 +215,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1113
+    x: 1159
     y: 0
-    width: 353
+    width: 307
     height: 464
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 21}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &10
@@ -249,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 122
+  controlID: 104
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,13 +268,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1108
+    width: 1157
     height: 513
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 22}
   m_Panes:
-  - {fileID: 21}
+  - {fileID: 22}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &12
@@ -291,15 +292,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1108
+    x: 1157
     y: 0
-    width: 358
+    width: 309
     height: 513
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 23}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 23}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &13
@@ -321,16 +322,2024 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 977
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 23}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 24}
   m_Panes:
-  - {fileID: 23}
-  - {fileID: 16}
-  - {fileID: 14}
+  - {fileID: 24}
+  - {fileID: 17}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5cd2e0ccf7a56478ad918ff9829c5c, type: 3}
+  m_Name: NuGetForUnity
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: NuGet For Unity
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1512
+    y: 20
+    width: 1158
+    height: 443
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  defaultIcon: {fileID: 2800000, guid: 0efa0a38ec1ce484896502259d7ee8f7, type: 3}
+  hasRefreshed: 1
+  numberToSkip: 0
+  serializableAvailablePackages:
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: System.Runtime.CompilerServices.Unsafe
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 6.1.0
+      <IsManuallyInstalled>k__BackingField: 0
+      dependencies:
+      - <TargetFramework>k__BackingField: .NETFramework4.6.2
+      - <TargetFramework>k__BackingField: net7.0
+      - <TargetFramework>k__BackingField: .NETStandard2.0
+      dependenciesFetched: 1
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/system.runtime.compilerservices.unsafe/6.1.0/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 6.1.0
+      - <FullVersion>k__BackingField: 6.0.0
+      - <FullVersion>k__BackingField: 5.0.0
+      - <FullVersion>k__BackingField: 4.7.1
+      - <FullVersion>k__BackingField: 4.7.0
+      - <FullVersion>k__BackingField: 4.6.0
+      - <FullVersion>k__BackingField: 4.5.3
+      - <FullVersion>k__BackingField: 4.5.2
+      - <FullVersion>k__BackingField: 4.5.1
+      - <FullVersion>k__BackingField: 4.5.0
+      - <FullVersion>k__BackingField: 4.4.0
+      - <FullVersion>k__BackingField: 4.3.0
+      - <FullVersion>k__BackingField: 4.0.0
+      <Authors>k__BackingField:
+      - Microsoft
+      <Description>k__BackingField: 'Provides the System.Runtime.CompilerServices.Unsafe
+        class, which provides generic, low-level functionality for manipulating pointers.
+
+
+        Commonly
+        Used Types:
+
+        System.Runtime.CompilerServices.Unsafe'
+      <TotalDownloads>k__BackingField: 5702510944
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/System.Runtime.CompilerServices.Unsafe/6.1.0/license
+      <ProjectUrl>k__BackingField: https://github.com/dotnet/maintenance-packages
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: System.Runtime.CompilerServices.Unsafe
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: HiNetCloud.System.Runtime.CompilerServices.Unsafe
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 23.10.10.15
+      <IsManuallyInstalled>k__BackingField: 0
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/hinetcloud.system.runtime.compilerservices.unsafe/23.10.10.15/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 23.10.10.15
+      - <FullVersion>k__BackingField: 23.10.10.10
+      - <FullVersion>k__BackingField: 23.10.8.9
+      - <FullVersion>k__BackingField: 23.10.7.8
+      - <FullVersion>k__BackingField: 23.10.3.9
+      - <FullVersion>k__BackingField: 23.9.28.6
+      - <FullVersion>k__BackingField: 23.9.25.11
+      - <FullVersion>k__BackingField: 23.9.25.8
+      - <FullVersion>k__BackingField: 23.9.22.12
+      - <FullVersion>k__BackingField: 23.9.12.10
+      - <FullVersion>k__BackingField: 23.9.6.17
+      - <FullVersion>k__BackingField: 23.9.5.9
+      - <FullVersion>k__BackingField: 23.8.30.12
+      - <FullVersion>k__BackingField: 23.8.29.19
+      - <FullVersion>k__BackingField: 23.8.27.6
+      - <FullVersion>k__BackingField: 23.8.24.7
+      - <FullVersion>k__BackingField: 23.8.19.5
+      - <FullVersion>k__BackingField: 23.8.2.7
+      - <FullVersion>k__BackingField: 23.6.29.6
+      - <FullVersion>k__BackingField: 23.6.24.11
+      - <FullVersion>k__BackingField: 23.6.23.12
+      - <FullVersion>k__BackingField: 23.6.22.8
+      - <FullVersion>k__BackingField: 23.6.21.6
+      - <FullVersion>k__BackingField: 23.6.13.9
+      - <FullVersion>k__BackingField: 23.6.12.8
+      - <FullVersion>k__BackingField: 23.6.8.7
+      - <FullVersion>k__BackingField: 23.5.23.10
+      - <FullVersion>k__BackingField: 23.5.23.6
+      - <FullVersion>k__BackingField: 23.5.22.17
+      - <FullVersion>k__BackingField: 23.5.16.11
+      - <FullVersion>k__BackingField: 23.5.13.9
+      - <FullVersion>k__BackingField: 23.5.11.13
+      - <FullVersion>k__BackingField: 23.5.8.17
+      - <FullVersion>k__BackingField: 23.5.8.16
+      - <FullVersion>k__BackingField: 23.5.5.19
+      - <FullVersion>k__BackingField: 23.5.5.6
+      - <FullVersion>k__BackingField: 23.5.4.16
+      - <FullVersion>k__BackingField: 23.5.4.13
+      - <FullVersion>k__BackingField: 23.5.4.10
+      - <FullVersion>k__BackingField: 23.5.4.9
+      - <FullVersion>k__BackingField: 23.4.25.7
+      - <FullVersion>k__BackingField: 23.4.20.10
+      - <FullVersion>k__BackingField: 23.4.18.15
+      - <FullVersion>k__BackingField: 23.4.17.11
+      - <FullVersion>k__BackingField: 23.4.12.12
+      - <FullVersion>k__BackingField: 23.4.12.6
+      - <FullVersion>k__BackingField: 23.3.31.8
+      - <FullVersion>k__BackingField: 23.3.30.13
+      - <FullVersion>k__BackingField: 23.3.29.10
+      - <FullVersion>k__BackingField: 23.3.28.14
+      - <FullVersion>k__BackingField: 23.3.27.9
+      - <FullVersion>k__BackingField: 23.3.19.10
+      - <FullVersion>k__BackingField: 23.3.13.8
+      - <FullVersion>k__BackingField: 23.3.9.16
+      - <FullVersion>k__BackingField: 23.3.9.9
+      - <FullVersion>k__BackingField: 23.1.28.14
+      - <FullVersion>k__BackingField: 23.1.11.7
+      - <FullVersion>k__BackingField: 22.12.26.12
+      - <FullVersion>k__BackingField: 22.12.18.9
+      - <FullVersion>k__BackingField: 22.12.12.8
+      - <FullVersion>k__BackingField: 22.11.2.8
+      - <FullVersion>k__BackingField: 22.10.29.18
+      - <FullVersion>k__BackingField: 22.10.20.18
+      - <FullVersion>k__BackingField: 22.10.19.7
+      - <FullVersion>k__BackingField: 22.10.1.6
+      - <FullVersion>k__BackingField: 22.9.17.6
+      - <FullVersion>k__BackingField: 22.9.13.23
+      - <FullVersion>k__BackingField: 22.9.8.17
+      - <FullVersion>k__BackingField: 22.9.5.10
+      - <FullVersion>k__BackingField: 22.8.22.9
+      - <FullVersion>k__BackingField: 22.8.21.17
+      - <FullVersion>k__BackingField: 22.8.21.9
+      - <FullVersion>k__BackingField: 22.8.20.10
+      - <FullVersion>k__BackingField: 22.8.20.7
+      - <FullVersion>k__BackingField: 22.8.17.6
+      - <FullVersion>k__BackingField: 22.8.14.22
+      - <FullVersion>k__BackingField: 22.8.4.8
+      - <FullVersion>k__BackingField: 22.8.2.20
+      - <FullVersion>k__BackingField: 22.7.23.8
+      - <FullVersion>k__BackingField: 22.7.19.7
+      - <FullVersion>k__BackingField: 22.7.18.8
+      - <FullVersion>k__BackingField: 22.7.16.15
+      - <FullVersion>k__BackingField: 22.7.14.21
+      - <FullVersion>k__BackingField: 22.7.13.8
+      - <FullVersion>k__BackingField: 22.6.28.13
+      - <FullVersion>k__BackingField: 22.6.25.20
+      - <FullVersion>k__BackingField: 22.6.21.13
+      - <FullVersion>k__BackingField: 22.6.20.6
+      - <FullVersion>k__BackingField: 22.6.7.4
+      - <FullVersion>k__BackingField: 22.6.5.21
+      - <FullVersion>k__BackingField: 21.8.5.16
+      - <FullVersion>k__BackingField: 21.8.4.8
+      - <FullVersion>k__BackingField: 21.8.1.23
+      - <FullVersion>k__BackingField: 21.8.1.12
+      - <FullVersion>k__BackingField: 21.7.30.7
+      - <FullVersion>k__BackingField: 21.7.1.6
+      - <FullVersion>k__BackingField: 21.6.29.10
+      - <FullVersion>k__BackingField: 21.6.25.17
+      - <FullVersion>k__BackingField: 21.6.17.7
+      - <FullVersion>k__BackingField: 21.6.15.11
+      - <FullVersion>k__BackingField: 21.6.11.9
+      - <FullVersion>k__BackingField: 21.6.7.6
+      - <FullVersion>k__BackingField: 21.5.27.16
+      - <FullVersion>k__BackingField: 21.4.29.8
+      - <FullVersion>k__BackingField: 21.4.25.13
+      - <FullVersion>k__BackingField: 21.4.24.6
+      - <FullVersion>k__BackingField: 21.4.23.10
+      - <FullVersion>k__BackingField: 21.4.21.13
+      - <FullVersion>k__BackingField: 21.4.16.6
+      - <FullVersion>k__BackingField: 21.4.12.11
+      - <FullVersion>k__BackingField: 21.4.10.18
+      - <FullVersion>k__BackingField: 21.4.6.9
+      - <FullVersion>k__BackingField: 21.4.2.9
+      - <FullVersion>k__BackingField: 21.3.29.11
+      - <FullVersion>k__BackingField: 21.3.16.17
+      <Authors>k__BackingField:
+      - Eric.Zhang
+      <Description>k__BackingField: "23.10.10.15-HiNetCoreAssembly-MD5\u3010xhDoKLVAAVdNht0u1zDjkg==\u3011"
+      <TotalDownloads>k__BackingField: 40871
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/HiNetCloud.System.Runtime.CompilerServices.Unsafe/23.10.10.15/license
+      <ProjectUrl>k__BackingField: http://www.hinetcloud.com/NugetProjectUrls/System.Runtime.CompilerServices.Unsafe.html
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: System.Runtime.CompilerServices.Unsafe-Library For
+        Hangzhou NetCloud Technology Co., Ltd
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: NetFx.System.Runtime.CompilerServices.Unsafe
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 4.0.0
+      <IsManuallyInstalled>k__BackingField: 0
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/netfx.system.runtime.compilerservices.unsafe/4.0.0/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 4.0.0
+      <Authors>k__BackingField:
+      - NightOwl888
+      <Description>k__BackingField: 'Provides the System.Runtime.CompilerServices.Unsafe
+        class, which provides generic, low-level functionality for manipulating pointers.
+
+
+        Commonly
+        Used Types:
+
+        System.Runtime.CompilerServices.Unsafe'
+      <TotalDownloads>k__BackingField: 1007
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/NetFx.System.Runtime.CompilerServices.Unsafe/4.0.0/license
+      <ProjectUrl>k__BackingField: https://github.com/NightOwl888/NetFx.Polyfills/
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: NetFx.System.Runtime.CompilerServices.Unsafe
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: Net4x.Runtime.CompilerServices.Unsafe
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 1.1.0
+      <IsManuallyInstalled>k__BackingField: 0
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: 
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 1.1.0
+      <Authors>k__BackingField:
+      - Net4x.Runtime.CompilerServices.Unsafe
+      <Description>k__BackingField: System.Runtime.CompilerServices.Unsafe
+      <TotalDownloads>k__BackingField: 508
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Net4x.Runtime.CompilerServices.Unsafe/1.1.0/license
+      <ProjectUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: Net4x.Runtime.CompilerServices.Unsafe
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: SafelyUnsafe
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 1.0.0
+      <IsManuallyInstalled>k__BackingField: 0
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: 
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 1.0.0
+      <Authors>k__BackingField:
+      - udaken
+      <Description>k__BackingField: "SafelyUnsafe provides System.Runtime.CompilerServices.Unsafe
+        with a \"little\" more safety Wrapper Method. And also provides several support
+        methods.\n\n\u2022 It is implemented in the UnsafeUnmanaged class. In most
+        cases, you just replace Unsafe to UnsafeUnmanaged.\n  All type argument is
+        restricted to unmanaged\n\u2022 overload for ref readonly, with an ReadOnly
+        in the suffix.\n\u2022 Utility methods like OffsetOf, Overlaps, NullRef,
+        IsNullRef.\n\u2022 .NET Standard 2.0 is supported."
+      <TotalDownloads>k__BackingField: 2250
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/SafelyUnsafe/1.0.0/license
+      <ProjectUrl>k__BackingField: https://github.com/udaken/SafelyUnsafe
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: SafelyUnsafe
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: Chasm.Compatibility.Unsafe
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 2.0.1
+      <IsManuallyInstalled>k__BackingField: 0
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: 
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 2.0.1
+      - <FullVersion>k__BackingField: 2.0.0
+      <Authors>k__BackingField:
+      - Chasmical
+      <Description>k__BackingField: Polyfills System.Runtime.CompilerServices.Unsafe
+        for a wide selection of target frameworks.
+      <TotalDownloads>k__BackingField: 250
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Chasm.Compatibility.Unsafe/2.0.1/license
+      <ProjectUrl>k__BackingField: https://github.com/Chasmical/Chasm
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: Chasm.Compatibility.Unsafe
+      <DownloadUrl>k__BackingField: 
+  serializableToInstallPackages: []
+  serializableUpdatePackages:
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: Google.Protobuf
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 3.29.3
+      <IsManuallyInstalled>k__BackingField: 1
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: 
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 3.29.3
+      - <FullVersion>k__BackingField: 3.29.2
+      - <FullVersion>k__BackingField: 3.29.1
+      - <FullVersion>k__BackingField: 3.29.0
+      - <FullVersion>k__BackingField: 3.28.3
+      - <FullVersion>k__BackingField: 3.28.2
+      - <FullVersion>k__BackingField: 3.28.1
+      - <FullVersion>k__BackingField: 3.28.0
+      - <FullVersion>k__BackingField: 3.27.5
+      - <FullVersion>k__BackingField: 3.27.4
+      - <FullVersion>k__BackingField: 3.27.3
+      - <FullVersion>k__BackingField: 3.27.2
+      - <FullVersion>k__BackingField: 3.27.1
+      - <FullVersion>k__BackingField: 3.27.0
+      - <FullVersion>k__BackingField: 3.26.1
+      - <FullVersion>k__BackingField: 3.26.0
+      - <FullVersion>k__BackingField: 3.25.6
+      - <FullVersion>k__BackingField: 3.25.5
+      - <FullVersion>k__BackingField: 3.25.4
+      - <FullVersion>k__BackingField: 3.25.3
+      - <FullVersion>k__BackingField: 3.25.2
+      - <FullVersion>k__BackingField: 3.25.1
+      - <FullVersion>k__BackingField: 3.25.0
+      - <FullVersion>k__BackingField: 3.24.4
+      - <FullVersion>k__BackingField: 3.24.3
+      - <FullVersion>k__BackingField: 3.24.2
+      - <FullVersion>k__BackingField: 3.24.1
+      - <FullVersion>k__BackingField: 3.24.0
+      - <FullVersion>k__BackingField: 3.23.4
+      - <FullVersion>k__BackingField: 3.23.3
+      - <FullVersion>k__BackingField: 3.23.2
+      - <FullVersion>k__BackingField: 3.23.1
+      - <FullVersion>k__BackingField: 3.23.0
+      - <FullVersion>k__BackingField: 3.22.5
+      - <FullVersion>k__BackingField: 3.22.4
+      - <FullVersion>k__BackingField: 3.22.3
+      - <FullVersion>k__BackingField: 3.22.1
+      - <FullVersion>k__BackingField: 3.22.0
+      - <FullVersion>k__BackingField: 3.21.12
+      - <FullVersion>k__BackingField: 3.21.11
+      - <FullVersion>k__BackingField: 3.21.10
+      - <FullVersion>k__BackingField: 3.21.9
+      - <FullVersion>k__BackingField: 3.21.8
+      - <FullVersion>k__BackingField: 3.21.7
+      - <FullVersion>k__BackingField: 3.21.6
+      - <FullVersion>k__BackingField: 3.21.5
+      - <FullVersion>k__BackingField: 3.21.4
+      - <FullVersion>k__BackingField: 3.21.3
+      - <FullVersion>k__BackingField: 3.21.2
+      - <FullVersion>k__BackingField: 3.21.1
+      - <FullVersion>k__BackingField: 3.21.0
+      - <FullVersion>k__BackingField: 3.20.3
+      - <FullVersion>k__BackingField: 3.20.2
+      - <FullVersion>k__BackingField: 3.20.1
+      - <FullVersion>k__BackingField: 3.20.0
+      - <FullVersion>k__BackingField: 3.19.6
+      - <FullVersion>k__BackingField: 3.19.5
+      - <FullVersion>k__BackingField: 3.19.4
+      - <FullVersion>k__BackingField: 3.19.3
+      - <FullVersion>k__BackingField: 3.19.2
+      - <FullVersion>k__BackingField: 3.19.1
+      - <FullVersion>k__BackingField: 3.19.0
+      - <FullVersion>k__BackingField: 3.18.3
+      - <FullVersion>k__BackingField: 3.18.2
+      - <FullVersion>k__BackingField: 3.18.1
+      - <FullVersion>k__BackingField: 3.18.0
+      - <FullVersion>k__BackingField: 3.17.3
+      - <FullVersion>k__BackingField: 3.17.2
+      - <FullVersion>k__BackingField: 3.17.1
+      - <FullVersion>k__BackingField: 3.17.0
+      - <FullVersion>k__BackingField: 3.16.0
+      - <FullVersion>k__BackingField: 3.15.8
+      - <FullVersion>k__BackingField: 3.15.7
+      - <FullVersion>k__BackingField: 3.15.6
+      - <FullVersion>k__BackingField: 3.15.5
+      - <FullVersion>k__BackingField: 3.15.4
+      - <FullVersion>k__BackingField: 3.15.3
+      - <FullVersion>k__BackingField: 3.15.2
+      - <FullVersion>k__BackingField: 3.15.1
+      - <FullVersion>k__BackingField: 3.15.0
+      - <FullVersion>k__BackingField: 3.14.0
+      - <FullVersion>k__BackingField: 3.13.0
+      - <FullVersion>k__BackingField: 3.12.4
+      - <FullVersion>k__BackingField: 3.12.3
+      - <FullVersion>k__BackingField: 3.12.2
+      - <FullVersion>k__BackingField: 3.12.1
+      - <FullVersion>k__BackingField: 3.12.0
+      - <FullVersion>k__BackingField: 3.11.4
+      - <FullVersion>k__BackingField: 3.11.3
+      - <FullVersion>k__BackingField: 3.11.2
+      - <FullVersion>k__BackingField: 3.11.1
+      - <FullVersion>k__BackingField: 3.10.1
+      - <FullVersion>k__BackingField: 3.10.0
+      - <FullVersion>k__BackingField: 3.9.2
+      - <FullVersion>k__BackingField: 3.9.1
+      - <FullVersion>k__BackingField: 3.8.0
+      - <FullVersion>k__BackingField: 3.7.0
+      - <FullVersion>k__BackingField: 3.6.1
+      - <FullVersion>k__BackingField: 3.6.0
+      - <FullVersion>k__BackingField: 3.5.1
+      - <FullVersion>k__BackingField: 3.5.0
+      - <FullVersion>k__BackingField: 3.4.1
+      - <FullVersion>k__BackingField: 3.4.0
+      - <FullVersion>k__BackingField: 3.3.0
+      - <FullVersion>k__BackingField: 3.2.0
+      - <FullVersion>k__BackingField: 3.1.0
+      - <FullVersion>k__BackingField: 3.0.0
+      <Authors>k__BackingField:
+      - Google Inc.
+      <Description>k__BackingField: C# runtime library for Protocol Buffers - Google's
+        data interchange format.
+      <TotalDownloads>k__BackingField: 626087288
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Google.Protobuf/3.29.3/license
+      <ProjectUrl>k__BackingField: https://github.com/protocolbuffers/protobuf
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: Google.Protobuf
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: Grpc.Core.Api
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 2.67.0
+      <IsManuallyInstalled>k__BackingField: 1
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/grpc.core.api/2.67.0/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 2.67.0
+      - <FullVersion>k__BackingField: 2.66.0
+      - <FullVersion>k__BackingField: 2.65.0
+      - <FullVersion>k__BackingField: 2.64.0
+      - <FullVersion>k__BackingField: 2.63.0
+      - <FullVersion>k__BackingField: 2.62.0
+      - <FullVersion>k__BackingField: 2.61.0
+      - <FullVersion>k__BackingField: 2.60.0
+      - <FullVersion>k__BackingField: 2.59.0
+      - <FullVersion>k__BackingField: 2.58.0
+      - <FullVersion>k__BackingField: 2.57.0
+      - <FullVersion>k__BackingField: 2.56.0
+      - <FullVersion>k__BackingField: 2.55.0
+      - <FullVersion>k__BackingField: 2.54.0
+      - <FullVersion>k__BackingField: 2.53.0
+      - <FullVersion>k__BackingField: 2.52.0
+      - <FullVersion>k__BackingField: 2.51.0
+      - <FullVersion>k__BackingField: 2.50.0
+      - <FullVersion>k__BackingField: 2.49.0
+      - <FullVersion>k__BackingField: 2.48.0
+      - <FullVersion>k__BackingField: 2.47.0
+      - <FullVersion>k__BackingField: 2.46.6
+      - <FullVersion>k__BackingField: 2.46.5
+      - <FullVersion>k__BackingField: 2.46.3
+      - <FullVersion>k__BackingField: 2.46.1
+      - <FullVersion>k__BackingField: 2.45.0
+      - <FullVersion>k__BackingField: 2.44.0
+      - <FullVersion>k__BackingField: 2.43.0
+      - <FullVersion>k__BackingField: 2.42.0
+      - <FullVersion>k__BackingField: 2.41.1
+      - <FullVersion>k__BackingField: 2.41.0
+      - <FullVersion>k__BackingField: 2.40.0
+      - <FullVersion>k__BackingField: 2.39.1
+      - <FullVersion>k__BackingField: 2.38.1
+      - <FullVersion>k__BackingField: 2.38.0
+      - <FullVersion>k__BackingField: 2.37.1
+      - <FullVersion>k__BackingField: 2.37.0
+      - <FullVersion>k__BackingField: 2.36.4
+      - <FullVersion>k__BackingField: 2.36.1
+      - <FullVersion>k__BackingField: 2.36.0
+      - <FullVersion>k__BackingField: 2.35.0
+      - <FullVersion>k__BackingField: 2.34.1
+      - <FullVersion>k__BackingField: 2.34.0
+      - <FullVersion>k__BackingField: 2.33.1
+      - <FullVersion>k__BackingField: 2.32.0
+      - <FullVersion>k__BackingField: 2.31.0
+      - <FullVersion>k__BackingField: 2.30.0
+      - <FullVersion>k__BackingField: 2.29.0
+      - <FullVersion>k__BackingField: 2.28.1
+      - <FullVersion>k__BackingField: 2.28.0
+      - <FullVersion>k__BackingField: 2.27.0
+      - <FullVersion>k__BackingField: 2.26.0
+      - <FullVersion>k__BackingField: 2.25.0
+      - <FullVersion>k__BackingField: 2.24.0
+      - <FullVersion>k__BackingField: 2.23.1
+      - <FullVersion>k__BackingField: 2.23.0
+      - <FullVersion>k__BackingField: 1.22.1
+      - <FullVersion>k__BackingField: 1.22.0
+      - <FullVersion>k__BackingField: 1.21.0
+      - <FullVersion>k__BackingField: 1.20.1
+      - <FullVersion>k__BackingField: 1.20.0
+      - <FullVersion>k__BackingField: 1.19.0
+      <Authors>k__BackingField:
+      - The gRPC Authors
+      <Description>k__BackingField: gRPC C# Surface API
+      <TotalDownloads>k__BackingField: 508071573
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Grpc.Core.Api/2.67.0/license
+      <ProjectUrl>k__BackingField: https://github.com/grpc/grpc-dotnet
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: Grpc.Core.Api
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: Grpc.Net.Client
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 2.67.0
+      <IsManuallyInstalled>k__BackingField: 1
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/grpc.net.client/2.67.0/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 2.67.0
+      - <FullVersion>k__BackingField: 2.66.0
+      - <FullVersion>k__BackingField: 2.65.0
+      - <FullVersion>k__BackingField: 2.64.0
+      - <FullVersion>k__BackingField: 2.63.0
+      - <FullVersion>k__BackingField: 2.62.0
+      - <FullVersion>k__BackingField: 2.61.0
+      - <FullVersion>k__BackingField: 2.60.0
+      - <FullVersion>k__BackingField: 2.59.0
+      - <FullVersion>k__BackingField: 2.58.0
+      - <FullVersion>k__BackingField: 2.57.0
+      - <FullVersion>k__BackingField: 2.56.0
+      - <FullVersion>k__BackingField: 2.55.0
+      - <FullVersion>k__BackingField: 2.54.0
+      - <FullVersion>k__BackingField: 2.53.0
+      - <FullVersion>k__BackingField: 2.52.0
+      - <FullVersion>k__BackingField: 2.51.0
+      - <FullVersion>k__BackingField: 2.50.0
+      - <FullVersion>k__BackingField: 2.49.0
+      - <FullVersion>k__BackingField: 2.48.0
+      - <FullVersion>k__BackingField: 2.47.0
+      - <FullVersion>k__BackingField: 2.46.0
+      - <FullVersion>k__BackingField: 2.45.0
+      - <FullVersion>k__BackingField: 2.44.0
+      - <FullVersion>k__BackingField: 2.43.0
+      - <FullVersion>k__BackingField: 2.42.0
+      - <FullVersion>k__BackingField: 2.41.0
+      - <FullVersion>k__BackingField: 2.40.0
+      - <FullVersion>k__BackingField: 2.39.0
+      - <FullVersion>k__BackingField: 2.38.0
+      - <FullVersion>k__BackingField: 2.37.0
+      - <FullVersion>k__BackingField: 2.36.0
+      - <FullVersion>k__BackingField: 2.35.0
+      - <FullVersion>k__BackingField: 2.34.0
+      - <FullVersion>k__BackingField: 2.33.1
+      - <FullVersion>k__BackingField: 2.32.0
+      - <FullVersion>k__BackingField: 2.31.0
+      - <FullVersion>k__BackingField: 2.30.0
+      - <FullVersion>k__BackingField: 2.29.0
+      - <FullVersion>k__BackingField: 2.28.0
+      - <FullVersion>k__BackingField: 2.27.0
+      - <FullVersion>k__BackingField: 2.26.0
+      - <FullVersion>k__BackingField: 2.25.0
+      - <FullVersion>k__BackingField: 2.24.0
+      - <FullVersion>k__BackingField: 2.23.2
+      <Authors>k__BackingField:
+      - The gRPC Authors
+      <Description>k__BackingField: .NET client for gRPC
+      <TotalDownloads>k__BackingField: 324302688
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Grpc.Net.Client/2.67.0/license
+      <ProjectUrl>k__BackingField: https://github.com/grpc/grpc-dotnet
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: Grpc.Net.Client
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: Grpc.Net.Common
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 2.67.0
+      <IsManuallyInstalled>k__BackingField: 0
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/grpc.net.common/2.67.0/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 2.67.0
+      - <FullVersion>k__BackingField: 2.66.0
+      - <FullVersion>k__BackingField: 2.65.0
+      - <FullVersion>k__BackingField: 2.64.0
+      - <FullVersion>k__BackingField: 2.63.0
+      - <FullVersion>k__BackingField: 2.62.0
+      - <FullVersion>k__BackingField: 2.61.0
+      - <FullVersion>k__BackingField: 2.60.0
+      - <FullVersion>k__BackingField: 2.59.0
+      - <FullVersion>k__BackingField: 2.58.0
+      - <FullVersion>k__BackingField: 2.57.0
+      - <FullVersion>k__BackingField: 2.56.0
+      - <FullVersion>k__BackingField: 2.55.0
+      - <FullVersion>k__BackingField: 2.54.0
+      - <FullVersion>k__BackingField: 2.53.0
+      - <FullVersion>k__BackingField: 2.52.0
+      - <FullVersion>k__BackingField: 2.51.0
+      - <FullVersion>k__BackingField: 2.50.0
+      - <FullVersion>k__BackingField: 2.49.0
+      - <FullVersion>k__BackingField: 2.48.0
+      - <FullVersion>k__BackingField: 2.47.0
+      - <FullVersion>k__BackingField: 2.46.0
+      - <FullVersion>k__BackingField: 2.45.0
+      - <FullVersion>k__BackingField: 2.44.0
+      - <FullVersion>k__BackingField: 2.43.0
+      - <FullVersion>k__BackingField: 2.42.0
+      - <FullVersion>k__BackingField: 2.41.0
+      - <FullVersion>k__BackingField: 2.40.0
+      - <FullVersion>k__BackingField: 2.39.0
+      - <FullVersion>k__BackingField: 2.38.0
+      - <FullVersion>k__BackingField: 2.37.0
+      - <FullVersion>k__BackingField: 2.36.0
+      - <FullVersion>k__BackingField: 2.35.0
+      - <FullVersion>k__BackingField: 2.34.0
+      - <FullVersion>k__BackingField: 2.33.1
+      - <FullVersion>k__BackingField: 2.32.0
+      - <FullVersion>k__BackingField: 2.31.0
+      - <FullVersion>k__BackingField: 2.30.0
+      - <FullVersion>k__BackingField: 2.29.0
+      - <FullVersion>k__BackingField: 2.28.0
+      - <FullVersion>k__BackingField: 2.27.0
+      - <FullVersion>k__BackingField: 2.26.0
+      - <FullVersion>k__BackingField: 2.25.0
+      - <FullVersion>k__BackingField: 2.24.0
+      - <FullVersion>k__BackingField: 2.23.2
+      <Authors>k__BackingField:
+      - The gRPC Authors
+      <Description>k__BackingField: Infrastructure for common functionality in gRPC
+      <TotalDownloads>k__BackingField: 345169648
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Grpc.Net.Common/2.67.0/license
+      <ProjectUrl>k__BackingField: https://github.com/grpc/grpc-dotnet
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: Grpc.Net.Common
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: Grpc.Tools
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 2.69.0
+      <IsManuallyInstalled>k__BackingField: 1
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/grpc.tools/2.69.0/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 2.69.0
+      - <FullVersion>k__BackingField: 2.68.1
+      - <FullVersion>k__BackingField: 2.67.0
+      - <FullVersion>k__BackingField: 2.66.0
+      - <FullVersion>k__BackingField: 2.65.0
+      - <FullVersion>k__BackingField: 2.64.0
+      - <FullVersion>k__BackingField: 2.63.0
+      - <FullVersion>k__BackingField: 2.62.0
+      - <FullVersion>k__BackingField: 2.61.0
+      - <FullVersion>k__BackingField: 2.60.0
+      - <FullVersion>k__BackingField: 2.59.0
+      - <FullVersion>k__BackingField: 2.58.0
+      - <FullVersion>k__BackingField: 2.57.0
+      - <FullVersion>k__BackingField: 2.56.2
+      - <FullVersion>k__BackingField: 2.56.0
+      - <FullVersion>k__BackingField: 2.55.1
+      - <FullVersion>k__BackingField: 2.54.0
+      - <FullVersion>k__BackingField: 2.53.0
+      - <FullVersion>k__BackingField: 2.52.0
+      - <FullVersion>k__BackingField: 2.51.0
+      - <FullVersion>k__BackingField: 2.50.0
+      - <FullVersion>k__BackingField: 2.49.1
+      - <FullVersion>k__BackingField: 2.49.0
+      - <FullVersion>k__BackingField: 2.48.1
+      - <FullVersion>k__BackingField: 2.48.0
+      - <FullVersion>k__BackingField: 2.47.0
+      - <FullVersion>k__BackingField: 2.46.6
+      - <FullVersion>k__BackingField: 2.46.5
+      - <FullVersion>k__BackingField: 2.46.3
+      - <FullVersion>k__BackingField: 2.46.1
+      - <FullVersion>k__BackingField: 2.45.0
+      - <FullVersion>k__BackingField: 2.44.0
+      - <FullVersion>k__BackingField: 2.43.0
+      - <FullVersion>k__BackingField: 2.42.0
+      - <FullVersion>k__BackingField: 2.41.1
+      - <FullVersion>k__BackingField: 2.41.0
+      - <FullVersion>k__BackingField: 2.40.0
+      - <FullVersion>k__BackingField: 2.39.1
+      - <FullVersion>k__BackingField: 2.38.1
+      - <FullVersion>k__BackingField: 2.38.0
+      - <FullVersion>k__BackingField: 2.37.1
+      - <FullVersion>k__BackingField: 2.37.0
+      - <FullVersion>k__BackingField: 2.36.4
+      - <FullVersion>k__BackingField: 2.36.1
+      - <FullVersion>k__BackingField: 2.36.0
+      - <FullVersion>k__BackingField: 2.35.0
+      - <FullVersion>k__BackingField: 2.34.1
+      - <FullVersion>k__BackingField: 2.34.0
+      - <FullVersion>k__BackingField: 2.33.1
+      - <FullVersion>k__BackingField: 2.32.0
+      - <FullVersion>k__BackingField: 2.31.0
+      - <FullVersion>k__BackingField: 2.30.0
+      - <FullVersion>k__BackingField: 2.29.0
+      - <FullVersion>k__BackingField: 2.28.1
+      - <FullVersion>k__BackingField: 2.28.0
+      - <FullVersion>k__BackingField: 2.27.0
+      - <FullVersion>k__BackingField: 2.26.0
+      - <FullVersion>k__BackingField: 2.25.0
+      - <FullVersion>k__BackingField: 2.24.0
+      - <FullVersion>k__BackingField: 2.23.1
+      - <FullVersion>k__BackingField: 2.23.0
+      - <FullVersion>k__BackingField: 1.22.1
+      - <FullVersion>k__BackingField: 1.22.0
+      - <FullVersion>k__BackingField: 1.21.0
+      - <FullVersion>k__BackingField: 1.20.1
+      - <FullVersion>k__BackingField: 1.20.0
+      - <FullVersion>k__BackingField: 1.19.0
+      - <FullVersion>k__BackingField: 1.18.0
+      - <FullVersion>k__BackingField: 1.17.1
+      - <FullVersion>k__BackingField: 1.17.0
+      - <FullVersion>k__BackingField: 1.16.0
+      - <FullVersion>k__BackingField: 1.15.0
+      - <FullVersion>k__BackingField: 1.14.2
+      - <FullVersion>k__BackingField: 1.14.1
+      - <FullVersion>k__BackingField: 1.14.0
+      - <FullVersion>k__BackingField: 1.13.1
+      - <FullVersion>k__BackingField: 1.13.0
+      - <FullVersion>k__BackingField: 1.12.0
+      - <FullVersion>k__BackingField: 1.11.1
+      - <FullVersion>k__BackingField: 1.11.0
+      - <FullVersion>k__BackingField: 1.10.1
+      - <FullVersion>k__BackingField: 1.10.0
+      - <FullVersion>k__BackingField: 1.9.0
+      - <FullVersion>k__BackingField: 1.8.6
+      - <FullVersion>k__BackingField: 1.8.3
+      - <FullVersion>k__BackingField: 1.8.0
+      - <FullVersion>k__BackingField: 1.7.3
+      - <FullVersion>k__BackingField: 1.7.1
+      - <FullVersion>k__BackingField: 1.7.0
+      - <FullVersion>k__BackingField: 1.6.1
+      - <FullVersion>k__BackingField: 1.6.0
+      - <FullVersion>k__BackingField: 1.4.1
+      - <FullVersion>k__BackingField: 1.4.0
+      - <FullVersion>k__BackingField: 1.3.6
+      - <FullVersion>k__BackingField: 1.3.0
+      - <FullVersion>k__BackingField: 1.2.2
+      - <FullVersion>k__BackingField: 1.2.0
+      - <FullVersion>k__BackingField: 1.1.0
+      - <FullVersion>k__BackingField: 1.0.1
+      - <FullVersion>k__BackingField: 1.0.0
+      - <FullVersion>k__BackingField: 0.15.0
+      - <FullVersion>k__BackingField: 0.14.0
+      - <FullVersion>k__BackingField: 0.13.1
+      - <FullVersion>k__BackingField: 0.13.0
+      - <FullVersion>k__BackingField: 0.12.0
+      - <FullVersion>k__BackingField: 0.7.1
+      - <FullVersion>k__BackingField: 0.7.0
+      - <FullVersion>k__BackingField: 0.6.1
+      - <FullVersion>k__BackingField: 0.6.0
+      - <FullVersion>k__BackingField: 0.5.1
+      - <FullVersion>k__BackingField: 0.5.0
+      <Authors>k__BackingField:
+      - The gRPC Authors
+      <Description>k__BackingField: gRPC and Protocol Buffer compiler for C# projects
+      <TotalDownloads>k__BackingField: 149105325
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Grpc.Tools/2.69.0/license
+      <ProjectUrl>k__BackingField: https://github.com/grpc/grpc
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: Grpc.Tools
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: Microsoft.Extensions.Logging.Abstractions
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 9.0.1
+      <IsManuallyInstalled>k__BackingField: 0
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/9.0.1/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 9.0.1
+      - <FullVersion>k__BackingField: 9.0.0
+      - <FullVersion>k__BackingField: 8.0.2
+      - <FullVersion>k__BackingField: 8.0.1
+      - <FullVersion>k__BackingField: 8.0.0
+      - <FullVersion>k__BackingField: 7.0.1
+      - <FullVersion>k__BackingField: 7.0.0
+      - <FullVersion>k__BackingField: 6.0.4
+      - <FullVersion>k__BackingField: 6.0.3
+      - <FullVersion>k__BackingField: 6.0.2
+      - <FullVersion>k__BackingField: 6.0.1
+      - <FullVersion>k__BackingField: 6.0.0
+      - <FullVersion>k__BackingField: 5.0.0
+      - <FullVersion>k__BackingField: 3.1.32
+      - <FullVersion>k__BackingField: 3.1.31
+      - <FullVersion>k__BackingField: 3.1.30
+      - <FullVersion>k__BackingField: 3.1.29
+      - <FullVersion>k__BackingField: 3.1.28
+      - <FullVersion>k__BackingField: 3.1.27
+      - <FullVersion>k__BackingField: 3.1.26
+      - <FullVersion>k__BackingField: 3.1.25
+      - <FullVersion>k__BackingField: 3.1.24
+      - <FullVersion>k__BackingField: 3.1.23
+      - <FullVersion>k__BackingField: 3.1.22
+      - <FullVersion>k__BackingField: 3.1.21
+      - <FullVersion>k__BackingField: 3.1.20
+      - <FullVersion>k__BackingField: 3.1.19
+      - <FullVersion>k__BackingField: 3.1.18
+      - <FullVersion>k__BackingField: 3.1.17
+      - <FullVersion>k__BackingField: 3.1.16
+      - <FullVersion>k__BackingField: 3.1.15
+      - <FullVersion>k__BackingField: 3.1.14
+      - <FullVersion>k__BackingField: 3.1.13
+      - <FullVersion>k__BackingField: 3.1.12
+      - <FullVersion>k__BackingField: 3.1.11
+      - <FullVersion>k__BackingField: 3.1.10
+      - <FullVersion>k__BackingField: 3.1.9
+      - <FullVersion>k__BackingField: 3.1.8
+      - <FullVersion>k__BackingField: 3.1.7
+      - <FullVersion>k__BackingField: 3.1.6
+      - <FullVersion>k__BackingField: 3.1.5
+      - <FullVersion>k__BackingField: 3.1.4
+      - <FullVersion>k__BackingField: 3.1.3
+      - <FullVersion>k__BackingField: 3.1.2
+      - <FullVersion>k__BackingField: 3.1.1
+      - <FullVersion>k__BackingField: 3.1.0
+      - <FullVersion>k__BackingField: 3.0.3
+      - <FullVersion>k__BackingField: 3.0.2
+      - <FullVersion>k__BackingField: 3.0.1
+      - <FullVersion>k__BackingField: 3.0.0
+      - <FullVersion>k__BackingField: 2.2.0
+      - <FullVersion>k__BackingField: 2.1.1
+      - <FullVersion>k__BackingField: 2.1.0
+      - <FullVersion>k__BackingField: 2.0.2
+      - <FullVersion>k__BackingField: 2.0.1
+      - <FullVersion>k__BackingField: 2.0.0
+      - <FullVersion>k__BackingField: 1.1.2
+      - <FullVersion>k__BackingField: 1.1.1
+      - <FullVersion>k__BackingField: 1.1.0
+      - <FullVersion>k__BackingField: 1.0.2
+      - <FullVersion>k__BackingField: 1.0.1
+      - <FullVersion>k__BackingField: 1.0.0
+      <Authors>k__BackingField:
+      - Microsoft
+      <Description>k__BackingField: 'Logging abstractions for Microsoft.Extensions.Logging.
+
+
+        Commonly
+        Used Types:
+
+        Microsoft.Extensions.Logging.ILogger
+
+        Microsoft.Extensions.Logging.ILoggerFactory
+
+        Microsoft.Extensions.Logging.ILogger<TCategoryName>
+
+        Microsoft.Extensions.Logging.LogLevel
+
+        Microsoft.Extensions.Logging.Logger<T>
+
+        Microsoft.Extensions.Logging.LoggerMessage
+
+        Microsoft.Extensions.Logging.Abstractions.NullLogger'
+      <TotalDownloads>k__BackingField: 6197154849
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.Extensions.Logging.Abstractions/9.0.1/license
+      <ProjectUrl>k__BackingField: https://dot.net/
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: Microsoft.Extensions.Logging.Abstractions
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: System.Diagnostics.DiagnosticSource
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 9.0.1
+      <IsManuallyInstalled>k__BackingField: 0
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/system.diagnostics.diagnosticsource/9.0.1/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 9.0.1
+      - <FullVersion>k__BackingField: 9.0.0
+      - <FullVersion>k__BackingField: 8.0.1
+      - <FullVersion>k__BackingField: 8.0.0
+      - <FullVersion>k__BackingField: 7.0.2
+      - <FullVersion>k__BackingField: 7.0.1
+      - <FullVersion>k__BackingField: 7.0.0
+      - <FullVersion>k__BackingField: 6.0.2
+      - <FullVersion>k__BackingField: 6.0.1
+      - <FullVersion>k__BackingField: 6.0.0
+      - <FullVersion>k__BackingField: 5.0.1
+      - <FullVersion>k__BackingField: 5.0.0
+      - <FullVersion>k__BackingField: 4.7.1
+      - <FullVersion>k__BackingField: 4.7.0
+      - <FullVersion>k__BackingField: 4.6.0
+      - <FullVersion>k__BackingField: 4.5.1
+      - <FullVersion>k__BackingField: 4.5.0
+      - <FullVersion>k__BackingField: 4.4.1
+      - <FullVersion>k__BackingField: 4.4.0
+      - <FullVersion>k__BackingField: 4.3.1
+      - <FullVersion>k__BackingField: 4.3.0
+      - <FullVersion>k__BackingField: 4.0.0
+      <Authors>k__BackingField:
+      - Microsoft
+      <Description>k__BackingField: 'Provides Classes that allow you to decouple
+        code logging rich (unserializable) diagnostics/telemetry (e.g. framework)
+        from code that consumes it (e.g. tools)
+
+
+        Commonly Used Types:
+
+        System.Diagnostics.DiagnosticListener
+
+        System.Diagnostics.DiagnosticSource'
+      <TotalDownloads>k__BackingField: 6010227616
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource/9.0.1/license
+      <ProjectUrl>k__BackingField: https://dot.net/
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: System.Diagnostics.DiagnosticSource
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: System.IO.Pipelines
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 9.0.1
+      <IsManuallyInstalled>k__BackingField: 1
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/system.io.pipelines/9.0.1/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 9.0.1
+      - <FullVersion>k__BackingField: 9.0.0
+      - <FullVersion>k__BackingField: 8.0.0
+      - <FullVersion>k__BackingField: 7.0.0
+      - <FullVersion>k__BackingField: 6.0.3
+      - <FullVersion>k__BackingField: 6.0.2
+      - <FullVersion>k__BackingField: 6.0.1
+      - <FullVersion>k__BackingField: 6.0.0
+      - <FullVersion>k__BackingField: 5.0.2
+      - <FullVersion>k__BackingField: 5.0.1
+      - <FullVersion>k__BackingField: 5.0.0
+      - <FullVersion>k__BackingField: 4.7.5
+      - <FullVersion>k__BackingField: 4.7.4
+      - <FullVersion>k__BackingField: 4.7.3
+      - <FullVersion>k__BackingField: 4.7.2
+      - <FullVersion>k__BackingField: 4.7.1
+      - <FullVersion>k__BackingField: 4.7.0
+      - <FullVersion>k__BackingField: 4.6.0
+      - <FullVersion>k__BackingField: 4.5.4
+      - <FullVersion>k__BackingField: 4.5.3
+      - <FullVersion>k__BackingField: 4.5.2
+      - <FullVersion>k__BackingField: 4.5.1
+      - <FullVersion>k__BackingField: 4.5.0
+      <Authors>k__BackingField:
+      - Microsoft
+      <Description>k__BackingField: 'Single producer single consumer byte buffer
+        management.
+
+
+        Commonly Used Types:
+
+        System.IO.Pipelines.Pipe
+
+        System.IO.Pipelines.PipeWriter
+
+        System.IO.Pipelines.PipeReader'
+      <TotalDownloads>k__BackingField: 1383682269
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/System.IO.Pipelines/9.0.1/license
+      <ProjectUrl>k__BackingField: https://dot.net/
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: System.IO.Pipelines
+      <DownloadUrl>k__BackingField: 
+  - packageLocal:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSource:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageType: 2
+    packageV2:
+      <Id>k__BackingField: 
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 
+      <IsManuallyInstalled>k__BackingField: 0
+      icon: {fileID: 0}
+      <DownloadUrl>k__BackingField: 
+      <IconUrl>k__BackingField: 
+      <RepositoryBranch>k__BackingField: 
+      <Dependencies>k__BackingField: []
+      <Authors>k__BackingField: []
+      <Description>k__BackingField: 
+      <TotalDownloads>k__BackingField: 0
+      <LicenseUrl>k__BackingField: 
+      <ProjectUrl>k__BackingField: 
+      <ReleaseNotes>k__BackingField: 
+      <RepositoryCommit>k__BackingField: 
+      <RepositoryType>k__BackingField: 0
+      <RepositoryUrl>k__BackingField: 
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: 
+      packageSourceV2:
+        <Name>k__BackingField: 
+        <SavedPath>k__BackingField: 
+        <SavedProtocolVersion>k__BackingField: 
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 0
+      versions: []
+    packageV3:
+      <Id>k__BackingField: System.Runtime.CompilerServices.Unsafe
+      <PackageVersion>k__BackingField:
+        <FullVersion>k__BackingField: 6.1.0
+      <IsManuallyInstalled>k__BackingField: 0
+      dependencies: []
+      dependenciesFetched: 0
+      icon: {fileID: 0}
+      iconUrl: https://api.nuget.org/v3-flatcontainer/system.runtime.compilerservices.unsafe/6.1.0/icon
+      packageSource:
+        <Name>k__BackingField: nuget.org
+        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
+        <SavedProtocolVersion>k__BackingField: 
+        <UpdateSearchBatchSize>k__BackingField: 20
+        <UserName>k__BackingField: 
+        <SavedPassword>k__BackingField: 
+        <CredentialsStoredInExternalFile>k__BackingField: 0
+        <IsEnabled>k__BackingField: 1
+      <Versions>k__BackingField:
+      - <FullVersion>k__BackingField: 6.1.0
+      - <FullVersion>k__BackingField: 6.0.0
+      - <FullVersion>k__BackingField: 5.0.0
+      - <FullVersion>k__BackingField: 4.7.1
+      - <FullVersion>k__BackingField: 4.7.0
+      - <FullVersion>k__BackingField: 4.6.0
+      - <FullVersion>k__BackingField: 4.5.3
+      - <FullVersion>k__BackingField: 4.5.2
+      - <FullVersion>k__BackingField: 4.5.1
+      - <FullVersion>k__BackingField: 4.5.0
+      - <FullVersion>k__BackingField: 4.4.0
+      - <FullVersion>k__BackingField: 4.3.0
+      - <FullVersion>k__BackingField: 4.0.0
+      <Authors>k__BackingField:
+      - Microsoft
+      <Description>k__BackingField: 'Provides the System.Runtime.CompilerServices.Unsafe
+        class, which provides generic, low-level functionality for manipulating pointers.
+
+
+        Commonly
+        Used Types:
+
+        System.Runtime.CompilerServices.Unsafe'
+      <TotalDownloads>k__BackingField: 5702510944
+      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/System.Runtime.CompilerServices.Unsafe/6.1.0/license
+      <ProjectUrl>k__BackingField: https://github.com/dotnet/maintenance-packages
+      <Summary>k__BackingField: 
+      <Title>k__BackingField: System.Runtime.CompilerServices.Unsafe
+      <DownloadUrl>k__BackingField: 
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -346,7 +2355,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Occlusion
-    m_Image: {fileID: -6304520642066340446, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -3571815596324412722, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -365,7 +2374,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,7 +2390,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Preferences
-    m_Image: {fileID: 866346219090771560, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -5712115415447495865, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -407,8 +2416,8 @@ MonoBehaviour:
   m_SearchText: 
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 71137e95
-    m_LastClickedID: -1786899599
+    m_SelectedIDs: 36d7af56
+    m_LastClickedID: 1454364470
     m_ExpandedIDs: 2956c29689577ec10000000001fecd11
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -427,7 +2436,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -443,7 +2452,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Lighting
-    m_Image: {fileID: -1477008817101679558, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -1347227620855488341, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -462,7 +2471,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -478,14 +2487,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Project Settings
-    m_Image: {fileID: 866346219090771560, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -5712115415447495865, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 1512
     y: 20
-    width: 1112
+    width: 1158
     height: 443
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -498,14 +2507,14 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_PosLeft: {x: 0, y: 0}
-  m_PosRight: {x: 0, y: 0}
+  m_PosRight: {x: 0, y: 108.00287}
   m_Scope: 1
   m_SplitterFlex: 0.2
   m_SearchText: 
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e594f01a
-    m_LastClickedID: 451974373
+    m_SelectedIDs: 53336be2
+    m_LastClickedID: -496290989
     m_ExpandedIDs: a01a5fa653336be200000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -524,7 +2533,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -540,14 +2549,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 1512
     y: 20
-    width: 1112
+    width: 1158
     height: 443
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -970,7 +2979,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.15539171, y: 0.05953887, z: -0.009386315, w: 0.986024}
     speed: 2
-    m_Value: {x: -0.15539171, y: -0.059538875, z: 0.009386315, w: -0.986024}
+    m_Value: {x: 0.15538993, y: 0.05953819, z: -0.009386208, w: 0.98601276}
   m_Size:
     m_Target: 2.1473026
     speed: 2
@@ -999,7 +3008,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1015,14 +3024,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 1512
     y: 20
-    width: 1112
+    width: 1158
     height: 443
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1034,7 +3043,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &20
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1050,14 +3059,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2625
+    x: 2671
     y: 20
-    width: 351
+    width: 305
     height: 443
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1072,9 +3081,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3c530000
+      m_SelectedIDs: 4a6c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 02faffff
+      m_ExpandedIDs: 54f5ffffde6b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1098,7 +3107,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &21
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1114,14 +3123,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 1512
     y: 484
-    width: 1107
+    width: 1156
     height: 492
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1139,7 +3148,7 @@ MonoBehaviour:
   m_ShowGizmos: 1
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1107, y: 471}
+  m_TargetSize: {x: 1156, y: 471}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1154,8 +3163,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -553.5
-    m_HBaseRangeMax: 553.5
+    m_HBaseRangeMin: -578
+    m_HBaseRangeMax: 578
     m_VBaseRangeMin: -235.5
     m_VBaseRangeMax: 235.5
     m_HAllowExceedBaseRangeMin: 1
@@ -1175,29 +3184,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1107
+      width: 1156
       height: 471
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 553.5, y: 235.5}
+    m_Translation: {x: 578, y: 235.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -553.5
+      x: -578
       y: -235.5
-      width: 1107
+      width: 1156
       height: 471
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1107, y: 492}
+  m_LastWindowPixelSize: {x: 1156, y: 492}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &22
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1213,14 +3222,14 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2620
+    x: 2669
     y: 484
-    width: 356
+    width: 307
     height: 492
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1245,7 +3254,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Models/Guns
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1262,7 +3271,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: a4400000
     m_LastClickedID: 16548
-    m_ExpandedIDs: 00000000fa690000aa6a0000ac6a0000ae6a0000b06a0000b26a0000b46a0000b66a0000b86a0000ba6a0000bc6a0000be6a0000c06a0000c26a0000c46a0000c66a0000c86a0000ca6a0000cc6a0000
+    m_ExpandedIDs: 00000000206c0000d46c0000d66c0000d86c0000da6c0000dc6c0000de6c0000e06c0000e26c0000e46c0000e66c0000e86c0000ea6c0000ec6c0000ee6c0000f06c0000f26c0000f46c0000f66c0000f86c0000fa6c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1287,24 +3296,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 418}
+    scrollPos: {x: 0, y: 268.99908}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000fa690000aa6a0000ac6a0000ae6a0000b06a0000b26a0000b46a0000b66a0000b86a0000ba6a0000bc6a0000be6a0000c06a0000c26a0000c46a0000c66a0000c86a0000ca6a0000cc6a0000
+    m_ExpandedIDs: 28dcf5ffffffffff00000000206c00007e6c0000d46c0000d66c0000d86c0000da6c0000dc6c0000de6c0000e06c0000e26c0000e66c0000e86c0000ea6c0000ec6c0000ee6c0000f06c0000f26c0000f66c0000f86c0000fa6c0000c26e0000e26e0000e46e0000827700008a7700000879000010790000547b00005c7b0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Boid
-      m_OriginalName: Boid
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 21308
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_SearchString: 
@@ -1346,7 +3355,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &23
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
