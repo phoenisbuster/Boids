@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Coco.Myid</id>
+    <version>1.0.2</version>
+    <authors>phucndb</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2">
+        <dependency id="Google.Protobuf" version="3.29.3" exclude="Build,Analyzers" />
+        <dependency id="Grpc.Net.Client" version="2.67.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0">
+        <dependency id="Google.Protobuf" version="3.29.3" exclude="Build,Analyzers" />
+        <dependency id="Grpc.Net.Client" version="2.67.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Google.Protobuf" version="3.29.3" exclude="Build,Analyzers" />
+        <dependency id="Grpc.Net.Client" version="2.67.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -72,6 +72,7 @@ public class BoidManager : MonoBehaviour {
             LastName = "test",
             PhotoUrl = "",
         };
+
         try
         {
             Greyhole.Myid.SignInTelegramReply reply = await client.SignInTelegramAsync(request, Header());
