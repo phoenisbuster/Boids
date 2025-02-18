@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Restore placeholder in NuGet.config before committing
-sed -i '' "s|$BOT_PRIVATE_TOKEN|%BOT_PRIVATE_TOKEN%|g" NuGet.config
+sed -i '' "s|$BOT_PRIVATE_TOKEN|%BOT_PRIVATE_TOKEN%|g" ./Assets/NuGet.config
 
 # Allow commit
 exit 0
