@@ -19,7 +19,7 @@ public class BoidManager : MonoBehaviour {
 
     public BoidSettings settings;
     public ComputeShader compute;
-    public 
+    public SerializableDictionary<int, GameObject> boidDict = new SerializableDictionary<int, GameObject> ();
     Boid[] boids;
 
     private Greyhole.Myid.MyID.MyIDClient client = null;

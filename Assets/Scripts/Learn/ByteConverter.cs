@@ -27,4 +27,10 @@ public static class ByteConverter
         // Parse JSON string into an object
         return JsonConvert.DeserializeObject<T>(jsonString);
     }
+
+    public static byte[] EndcodeObjectToByteArray<T>(T obj)
+    {
+        string jsonString = JsonConvert.SerializeObject(obj);
+        return Encoding.UTF8.GetBytes(jsonString);
+    }
 }
