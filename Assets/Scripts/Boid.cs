@@ -49,6 +49,8 @@ public class Boid : MonoBehaviour {
         if (material != null) {
             material.color = col;
         }
+
+        BaseWebsocketLite x = new BaseWebsocketLite ();
     }
 
     public void UpdateBoid () {

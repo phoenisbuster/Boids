@@ -1,8 +1,9 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace Assets.Base.Network.Websocket
+namespace MyWebsocket
 {
     public class IWsConnectOptions
     {
@@ -127,24 +128,30 @@ namespace Assets.Base.Network.Websocket
 
     public class NetData
     {
-        private readonly object _data;
-
-        private NetData(object data) => _data = data;
+        private readonly byte[] _data; // Read-only field for immutability
+        public byte[] Data => _data; // Public read-only access
+        
+        public NetData(byte[] data)
+        {
+            _data = data ?? throw new ArgumentNullException(nameof(data), "Data cannot be null.");
+        }
 
         // Factory methods for different types of data
-        public static NetData FromString(string value) => new NetData(value);
         public static NetData FromBytes(byte[] value) => new NetData(value);
-        public static NetData FromMemoryStream(MemoryStream value) => new NetData(value);
+        public static NetData FromMemoryStream(MemoryStream value) => new NetData(value.ToArray());
         public static NetData FromSpan(Span<byte> value) => new NetData(value.ToArray()); // Converts Span to byte[]
-        public static NetData FromMemory(Memory<byte> value) => new NetData(value.ToArray()); // Converts Memory to byte[]
+        public static NetData FromMemory(Memory<byte> value) => new NetData(value.ToArray()); // Converts Memory to byte[
 
-        // Type-safe retrieval methods
-        public T As<T>() => (T)_data;
-
-        // Helpers for type checking
-        public bool IsString() => _data is string;
-        public bool IsByteArray() => _data is byte[];
-        public bool IsMemoryStream() => _data is MemoryStream;
+        // Conversion methods
+        public override string ToString()
+        {
+            return _data.Length > 0 ? System.Text.Encoding.UTF8.GetString(_data) : string.Empty;
+        }
+        public byte[] ToBytes() => _data;
+        public MemoryStream ToMemoryStream() => new MemoryStream(_data);
+        public Span<byte> ToSpan() => _data;
+        public Memory<byte> ToMemory() => _data;
+        public int Length => _data.Length;
     }
 
     public delegate void NetCallFunc(int cmd, object data);
