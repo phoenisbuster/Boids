@@ -7,13 +7,13 @@ import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.9.
 import { getAuth, signInWithPopup, TwitterAuthProvider } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDbCyj_JgFAuYw8TzZMDZ8n0jI0-aGH4wg",
+  apiKey: "your_api_key",
   authDomain: "coco-park-telegram.firebaseapp.com",
   projectId: "coco-park-telegram",
   storageBucket: "coco-park-telegram.appspot.com",
   messagingSenderId: "542915110820",
-  appId: "1:542915110820:web:d2097d4dc54544b6848331",
-  measurementId: "G-E49QQN54NT"
+  appId: "your_app_id",
+  measurementId: "your_measurement_id"
 };
 
 //FCM-----------------------
