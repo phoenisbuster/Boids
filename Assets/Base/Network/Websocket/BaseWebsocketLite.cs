@@ -30,7 +30,7 @@ public class BaseWebsocketLite
     // Fields
     private WebSocket _ws  = null;
     private IWsConnectOptions _option = null;
-    private event Action<NetData> OnMessageHandler = null;
+    private event Action<string, NetData> OnMessageHandler = null;
 
     // Events
     /// <summary>
@@ -74,9 +74,27 @@ public class BaseWebsocketLite
     public bool IsReconnecting => _reconnecting;
 
     /// <summary>
+    /// Gets the channel ID associated with the WebSocket connection.
+    /// </summary>
+    public string ChannelId => _option.ChannelId;
+
+    /// <summary>
     /// Initializes a new instance of the <see cref="BaseWebsocketLite"/> class and starts the dispatch loop.
     /// </summary>
     public BaseWebsocketLite() {}
+
+    public BaseWebsocketLite(
+        Action _onDisconnected = null,
+        Action _onReconnected = null,
+        Action _onReconnectFail = null,
+        Action<float> _onPinged = null
+    )
+    {
+        OnDisconnected += _onDisconnected;
+        OnReconnected += _onReconnected;
+        OnReconnectFail += _onReconnectFail;
+        OnPinged += _onPinged;
+    }
 
     /// <summary>
     /// Asynchronously connects to a WebSocket server using the specified options.
@@ -87,9 +105,9 @@ public class BaseWebsocketLite
     /// <param name="onError">Optional callback invoked if an error occurs during connection.</param>
     public async Task ConnectWs(
         IWsConnectOptions options,
-        Action<NetData> onMessageHandler,
+        Action<string, NetData> onMessageHandler,
         Action onComplete = null,
-        Action onError = null
+        Action<string> onError = null
     )
     {
         if(_ws != null && (_ws.State == WebSocketState.Connecting || _ws.State == WebSocketState.Open))
@@ -99,7 +117,7 @@ public class BaseWebsocketLite
         
         _option = options;
         OnMessageHandler = onMessageHandler;
-        string url = BuildUrl(options);
+        string url = SocketUtils.BuildUrl(options);
         _ws = new WebSocket(url, options.Subprotocols, options.Headers);
         
         _ws.OnOpen += ()=>
@@ -131,14 +149,14 @@ public class BaseWebsocketLite
             else
             {
                 NetData netData = NetData.FromBytes(data);
-                onMessageHandler?.Invoke(netData);
+                onMessageHandler?.Invoke(options.ChannelId,netData);
             }
         };
 
         _ws.OnError += (error) =>
         {
             Debug.LogError("WebSocket Error: " + error);
-            onError?.Invoke();
+            onError?.Invoke(error);
         };
 
         _ws.OnClose += (code) =>
@@ -203,6 +221,11 @@ public class BaseWebsocketLite
     public void Dispose()
     {
         _ = CloseWs();
+        OnMessageHandler = null;
+        OnReconnected = null;
+        OnReconnectFail = null;
+        OnDisconnected = null;
+        OnPinged = null;
     }
 
     /// <summary>
@@ -346,43 +369,5 @@ public class BaseWebsocketLite
             if (delay < MIN_DISPATCH_INTERVAL) delay = MIN_DISPATCH_INTERVAL;
             await Task.Delay(delay);
         }
-    }
-
-    /// <summary>
-    /// Builds the WebSocket URL from the provided connection options.
-    /// </summary>
-    /// <param name="options">The connection options containing URL, protocol, host, etc.</param>
-    /// <returns>The constructed WebSocket URL.</returns>
-    private string BuildUrl(IWsConnectOptions options)
-    {
-        string url = !string.IsNullOrEmpty(options.Url)? options.Url : $"{options.Protocol}://{options.Host}:{options.Port}";
-        if(options.UrlToken == true)
-        {
-            url += $"?token={options.Token}";
-            if(options.Params != null && options.Params.Count > 0)
-            {
-                url = FormatUrl(url, options.Params);
-            }
-        }
-        return url;
-    }
-
-    /// <summary>
-    /// Formats the URL with query parameters.
-    /// </summary>
-    /// <param name="address">The base address.</param>
-    /// <param name="parameters">The query parameters.</param>
-    /// <returns>The formatted URL.</returns>
-    private string FormatUrl(string address, Dictionary<string, string> parameters)
-    {
-        var uriBuilder = new UriBuilder(address);
-        var query = new StringBuilder();
-        foreach (var param in parameters)
-        {
-            if (query.Length > 0) query.Append('&');
-            query.Append(Uri.EscapeDataString(param.Key)).Append('=').Append(Uri.EscapeDataString(param.Value));
-        }
-        uriBuilder.Query = query.ToString();
-        return uriBuilder.ToString();
     }
 }

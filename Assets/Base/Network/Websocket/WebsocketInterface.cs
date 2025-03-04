@@ -2,6 +2,9 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using UnityEditor.PackageManager;
+using System.Threading.Tasks;
 
 namespace MyWebsocket
 {
@@ -28,6 +31,17 @@ namespace MyWebsocket
             Subprotocols = new List<string>();
 
             AutoReconnect = -1;
+            ChannelId = "DEFAULT";
+        }
+
+        public IWsConnectOptions(string _channelId)
+        {
+            Params = new Dictionary<string, string>();
+            Headers = new Dictionary<string, string>();
+            Subprotocols = new List<string>();
+
+            AutoReconnect = -1;
+            ChannelId = _channelId;
         }
 
         public static WsConnectOptionsBuilder Builder() => new WsConnectOptionsBuilder();
@@ -195,15 +209,15 @@ namespace MyWebsocket
     public interface ISocket
     {
         // Connection events
-        event Action<object> OnConnected;
-        event Action<NetData> OnMessage;
-        event Action<object> OnError;
-        event Action<object> OnClosed;
+        public event Action OnConnected;
+        public event Action<NetData> OnMessage;
+        public event Action<string> OnError;
+        public event Action<int> OnClosed;
 
         // Methods
-        void Connect(object options);  // Connect to the server
-        void Send(NetData buffer);     // Send data
-        void Close(int code = 1000, string reason = "Normal Closure"); // Close connection
+        public Task<bool> Connect(IWsConnectOptions options); // Connect to the server
+        public Task<bool> Send(NetData buffer); // Send data
+        public Task Close(); // Close connection
     }
 
     public class SocketUtils
@@ -216,6 +230,44 @@ namespace MyWebsocket
                     : 0; // High-precision timer if supported
 
             return Guid.NewGuid().ToString("N"); // Generates a 32-character unique ID
+        }
+
+        /// <summary>
+        /// Builds the WebSocket URL from the provided connection options.
+        /// </summary>
+        /// <param name="options">The connection options containing URL, protocol, host, etc.</param>
+        /// <returns>The constructed WebSocket URL.</returns>
+        public static string BuildUrl(IWsConnectOptions options)
+        {
+            string url = !string.IsNullOrEmpty(options.Url)? options.Url : $"{options.Protocol}://{options.Host}:{options.Port}";
+            if(options.UrlToken == true)
+            {
+                url += $"?token={options.Token}";
+                if(options.Params != null && options.Params.Count > 0)
+                {
+                    url = FormatUrl(url, options.Params);
+                }
+            }
+            return url;
+        }
+
+        /// <summary>
+        /// Formats the URL with query parameters.
+        /// </summary>
+        /// <param name="address">The base address.</param>
+        /// <param name="parameters">The query parameters.</param>
+        /// <returns>The formatted URL.</returns>
+        public static string FormatUrl(string address, Dictionary<string, string> parameters)
+        {
+            var uriBuilder = new UriBuilder(address);
+            var query = new StringBuilder();
+            foreach (var param in parameters)
+            {
+                if (query.Length > 0) query.Append('&');
+                query.Append(Uri.EscapeDataString(param.Key)).Append('=').Append(Uri.EscapeDataString(param.Value));
+            }
+            uriBuilder.Query = query.ToString();
+            return uriBuilder.ToString();
         }
     }
 }
