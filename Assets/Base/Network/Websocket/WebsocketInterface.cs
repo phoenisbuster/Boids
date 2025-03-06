@@ -6,7 +6,7 @@ using System.Text;
 using UnityEditor.PackageManager;
 using System.Threading.Tasks;
 
-namespace MyWebsocket
+namespace MyBase.Network.MyWebsocket
 {
     public class IWsConnectOptions
     {

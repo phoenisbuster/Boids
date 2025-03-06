@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NativeWebSocket;
-using MyWebsocket;
 using System;
 using System.Text;
 using System.Threading.Tasks;
+
+namespace MyBase.Network.MyWebsocket
+{
 
 /// <summary>
 /// A lightweight WebSocket handler for managing a single connection with ping/pong functionality,
@@ -370,4 +372,6 @@ public class BaseWebsocketLite
             await Task.Delay(delay);
         }
     }
+}
+
 }

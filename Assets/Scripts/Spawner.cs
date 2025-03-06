@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using MyBase.ApplicationEvent;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {
@@ -16,6 +17,15 @@ public class Spawner : MonoBehaviour {
     void Awake () 
     {
         Spawn();
+
+        BoidManager.BoidManagerAction += TestEvent;
+    }
+
+    private void TestEvent(bool test) {
+        ApplicationEventManager.On("ev1", (x)=>
+        {
+            Debug.Log("BOID TEST EV " + test +x);
+        }, this);
     }
 
     void Spawn()

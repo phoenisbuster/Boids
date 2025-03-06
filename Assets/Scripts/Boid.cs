@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using MyBase.ApplicationEvent;
 using UnityEngine;
 
 public class Boid : MonoBehaviour {
@@ -49,8 +48,6 @@ public class Boid : MonoBehaviour {
         if (material != null) {
             material.color = col;
         }
-
-        BaseWebsocketLite x = new BaseWebsocketLite ();
     }
 
     public void UpdateBoid () {

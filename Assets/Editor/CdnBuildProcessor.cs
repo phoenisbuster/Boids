@@ -3,6 +3,7 @@ using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
 using System.IO;
+using MyBase.Utils.Web;
 
 namespace CustomBuild.Web.CdnHelper
 {

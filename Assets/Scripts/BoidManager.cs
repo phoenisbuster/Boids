@@ -12,11 +12,13 @@ using System;
 using Cysharp.Net.Http;
 using System.Net.Http;
 using System.Net.WebSockets;
-using WebUltils;
+using MyBase.ApplicationEvent;
 
 public class BoidManager : MonoBehaviour {
 
     const int threadGroupSize = 1024;
+
+    public static event Action<bool> BoidManagerAction;
 
     public BoidSettings settings;
     public ComputeShader compute;
@@ -44,16 +46,93 @@ public class BoidManager : MonoBehaviour {
         }
         
         // AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);
-        using var handler = new YetAnotherHttpHandler();
-        var httpClient = new HttpClient(handler);
-        var channel = GrpcChannel.ForAddress(@"https://api-stg.cocopark.fun", new GrpcChannelOptions
-        {
-            Credentials = ChannelCredentials.SecureSsl,
-            HttpClient = httpClient
-        });
-        client = new Greyhole.Myid.MyID.MyIDClient(channel);
-        SigninTelegram(MyCallback);
+        // using var handler = new YetAnotherHttpHandler();
+        // var httpClient = new HttpClient(handler);
+        // var channel = GrpcChannel.ForAddress(@"https://api-stg.cocopark.fun", new GrpcChannelOptions
+        // {
+        //     Credentials = ChannelCredentials.SecureSsl,
+        //     HttpClient = httpClient
+        // });
+        // client = new Greyhole.Myid.MyID.MyIDClient(channel);
+        // SigninTelegram(MyCallback);
+
+        ApplicationEventManager.On("ev1", Test1, this);
+        InvokeRepeating(nameof(EmitMesh), 5, 10);
+        Invoke(nameof(OnOffline1), 20);
+        Invoke(nameof(OnOffline2), 30);
+        Invoke(nameof(OnOffline3), 40);
+
+        BoidManagerAction?.Invoke(true);
     }
+
+    private void EmitMesh()
+    {
+        StartCoroutine(EmitEvent());
+    }
+
+    IEnumerator EmitEvent()
+    {
+        string s = "";
+        foreach (var item in ApplicationEventManager.eventMapping)
+        {
+            s += $"Event {item.Key}: Count {item.Value.Count}";
+            foreach (var callback in item.Value)
+            {
+                s += $" - {callback.Key} - {callback.Value.HaveAction()} - {callback.Value.HaveActionWithArgs()}";
+            }
+            s += "\n";
+        }
+        Debug.LogWarning(s);
+        
+        ApplicationEventManager.Fire("ev1", "EVENT 1 - ");
+        yield return new WaitForSeconds(0.5f);
+        ApplicationEventManager.Fire("ev2", "EVENT 2 - ", 3, 3.14f);
+        yield return new WaitForSeconds(0.5f);
+        ApplicationEventManager.Fire("ev3", "EVENT 3 - ", 3, 3.14f);
+    }
+
+    private void OnOffline1()
+    {
+        ApplicationEventManager.Off("ev2", Test1, this);
+        Debug.LogWarning("Off ev2 - Test 1");
+    }
+
+    private void OnOffline2()
+    {
+        ApplicationEventManager.Off("ev2", Action2, this);
+        Debug.LogWarning("Off ev2 - Test 2");
+    }
+
+    private void OnOffline3()
+    {
+        ApplicationEventManager.UnregisterEventFromObject("ev1", this);
+        Debug.LogWarning("Unregister ev1");
+    }
+
+    void OnEnable()
+    {
+        ApplicationEventManager.On("ev2", Test1, this);
+        ApplicationEventManager.On("ev2", Action2, this);
+        ApplicationEventManager.On("ev2", Action3, this);
+        ApplicationEventManager.On("ev3", Action3, this);
+    }
+
+    private void Test1()
+    {
+        Debug.Log("Test 1 no param");
+    }
+
+    private void Test2(String s = "default")
+    {
+        Debug.Log("Test 2 one param " + s);
+    }
+    void Action2(object[] args) => Test2((string)args[0]);
+
+    private void Test3(String s = "default", int i = 1, float x = 3.14f)
+    {
+        Debug.Log("Test 3 three params " + s + i + x);
+    }
+    void Action3(object[] args) => Test3((string)args[0], (int)args[1], (float)args[2]);
 
     private delegate void SigninTelegramCallback(string token, RpcException e);
     private delegate bool SigninTelegramCallback2(string token);

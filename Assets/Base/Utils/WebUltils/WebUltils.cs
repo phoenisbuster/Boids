@@ -6,7 +6,7 @@ using System.Text;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 
-namespace WebUltils
+namespace MyBase.Utils.Web
 {
     public static class WebGLCdnHelper
     {

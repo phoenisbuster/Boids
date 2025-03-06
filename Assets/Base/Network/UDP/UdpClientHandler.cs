@@ -22,6 +22,7 @@ public class UdpClientHandler<T>
 
     public HandleMsgObjectType OnHandleMessage;
     public HandleMsgBinaryType OnHandleBinaryMessage;
+    private volatile bool isRunning = false;
 
     public UdpClientHandler(string ip, int port)
     {
@@ -32,7 +33,7 @@ public class UdpClientHandler<T>
     public void Connect()
     {
         try
-        {
+        {   
             client = new UdpClient(host, port);
             endPoint = new IPEndPoint(IPAddress.Parse(host), port);
             receiveThread = new Thread(ReceiveData) { IsBackground = true };

@@ -1,7 +1,9 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
-using WebUltils;
+
+namespace MyBase.Utils.Web
+{
 
 public class BaseCdnLoader : MonoBehaviour
 {
@@ -122,4 +124,6 @@ public class BaseCdnLoader : MonoBehaviour
             callback?.Invoke(); // Simulate completion in Editor
         #endif
     }
+}
+
 }

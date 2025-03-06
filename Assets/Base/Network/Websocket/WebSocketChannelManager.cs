@@ -1,8 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using MyWebsocket;
-using UnityEngine;
+
+namespace MyBase.Network.MyWebsocket
+{
 
 public class WebSocketChannelManager
 {
@@ -85,4 +85,6 @@ public class WebSocketChannelManager
     public void Clear() => _channels.Clear();
     public int TotalChannelCount => _channels.Count;
     public BaseWebsocketLite GetChannel(string channelId) => _channels[channelId];
+}
+
 }
