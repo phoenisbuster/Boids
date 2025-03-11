@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
-namespace MyBase.ApplicationEvent
-{
+namespace MyBase.ApplicationEventManager
+{   
     public static class ApplicationEventKey
     {
         public static string ON_VIEW_CHANGE = "ON_VIEW_CHANGE";
@@ -19,5 +21,7 @@ namespace MyBase.ApplicationEvent
         /// Your own events
         /// ...
     }
+
+    
 }
 

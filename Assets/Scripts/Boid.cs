@@ -1,5 +1,4 @@
-﻿using MyBase.ApplicationEvent;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Boid : MonoBehaviour {
 

@@ -12,7 +12,7 @@ using System;
 using Cysharp.Net.Http;
 using System.Net.Http;
 using System.Net.WebSockets;
-using MyBase.ApplicationEvent;
+using MyBase.ApplicationEventManager;
 
 public class BoidManager : MonoBehaviour {
 
@@ -72,23 +72,23 @@ public class BoidManager : MonoBehaviour {
 
     IEnumerator EmitEvent()
     {
-        string s = "";
-        foreach (var item in ApplicationEventManager.eventMapping)
-        {
-            s += $"Event {item.Key}: Count {item.Value.Count}";
-            foreach (var callback in item.Value)
-            {
-                s += $" - {callback.Key} - {callback.Value.HaveAction()} - {callback.Value.HaveActionWithArgs()}";
-            }
-            s += "\n";
-        }
-        Debug.LogWarning(s);
+        // string s = "";
+        // foreach (var item in ApplicationEventManager.eventMapping)
+        // {
+        //     s += $"Event {item.Key}: Count {item.Value.Count}";
+        //     foreach (var callback in item.Value)
+        //     {
+        //         s += $" - {callback.Key} - {callback.Value.HaveAction()} - {callback.Value.HaveActionWithArgs()}";
+        //     }
+        //     s += "\n";
+        // }
+        // Debug.LogWarning(s);
         
-        ApplicationEventManager.Fire("ev1", "EVENT 1 - ");
+        // ApplicationEventManager.Fire("ev1", "EVENT 1 - ");
         yield return new WaitForSeconds(0.5f);
-        ApplicationEventManager.Fire("ev2", "EVENT 2 - ", 3, 3.14f);
+        // ApplicationEventManager.Fire("ev2", "EVENT 2 - ", 3, 3.14f);
         yield return new WaitForSeconds(0.5f);
-        ApplicationEventManager.Fire("ev3", "EVENT 3 - ", 3, 3.14f);
+        // ApplicationEventManager.Fire("ev3", "EVENT 3 - ", 3, 3.14f);
     }
 
     private void OnOffline1()
@@ -99,7 +99,7 @@ public class BoidManager : MonoBehaviour {
 
     private void OnOffline2()
     {
-        ApplicationEventManager.Off("ev2", Action2, this);
+        // ApplicationEventManager.Off("ev2", Action2, this);
         Debug.LogWarning("Off ev2 - Test 2");
     }
 
@@ -112,9 +112,9 @@ public class BoidManager : MonoBehaviour {
     void OnEnable()
     {
         ApplicationEventManager.On("ev2", Test1, this);
-        ApplicationEventManager.On("ev2", Action2, this);
-        ApplicationEventManager.On("ev2", Action3, this);
-        ApplicationEventManager.On("ev3", Action3, this);
+        // ApplicationEventManager.On("ev2", Action2, this);
+        // ApplicationEventManager.On("ev2", Action3, this);
+        // ApplicationEventManager.On("ev3", Action3, this);
     }
 
     private void Test1()
@@ -122,7 +122,7 @@ public class BoidManager : MonoBehaviour {
         Debug.Log("Test 1 no param");
     }
 
-    private void Test2(String s = "default")
+    private void Test2(string s = null)
     {
         Debug.Log("Test 2 one param " + s);
     }
