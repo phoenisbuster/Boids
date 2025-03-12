@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: MyAssets
+  m_EditorClassIdentifier: 
+  m_GroupName: MyAssets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 44d1265f03820403f959f43f54ceef37
+  m_SerializeEntries:
+  - m_GUID: 4cde6ba5a87074e8a973d577574f33c1
+    m_Address: Assets/Prefabs/Spawner.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: f065e8ee4b8ae400f8ba800d43a126ec, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e246fc81ffab04633bca7f908e67d6bc, type: 2}
+    - {fileID: 11400000, guid: a9e4b43ffe27c45f0ab7276c48dbe37c, type: 2}
