@@ -7,7 +7,9 @@ namespace MyBase.Singleton
 {
     public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
     {
-        public bool WillDestroyOnNewScene = false;
+        [SerializeField]
+        [Tooltip("Indicate that this singleton will be KEEP on loading new Scene. Default is FALSE")]
+        private bool persistAcrossScenes = false;
         
         private static T _instance = null;
         
@@ -33,12 +35,14 @@ namespace MyBase.Singleton
                         {
                             Debug.LogError("Problem during the creation of " + typeof(T).ToString());
                         }
+
+                        // A temporary singleton need to be destroyed on load
+                        _instance.persistAcrossScenes = true;
                     }
 
                     if (!_isInitialized)
                     {
-                        _isInitialized = true;
-                        _instance.OnAwake();
+                        _instance.Initialize();
                     }
                 }
                 return _instance;
@@ -53,23 +57,33 @@ namespace MyBase.Singleton
         // executing before this one, no need to search the object.
         private void Awake()
         {
-            if (_instance == null) 
+            if(_instance != null && _instance != this)
             {
-                _instance = this as T;
-            } 
-            else if (_instance != this) 
-            {
-                Debug.LogError ("Another instance of " + GetType () + " is already exist! Destroying self...");
-                DestroyImmediate (this);
-                return;
+                if(persistAcrossScenes)
+                {
+                    Debug.LogError($"Duplicate {GetType().Name} found on '{gameObject.name}'. Only one instance is allowed. Destroying duplicate.");
+                    DestroyImmediate(this);
+                    return;
+                }
+                else
+                {
+                    DestroyImmediate(_instance.gameObject);
+                }
             }
+            
+            _instance = this as T;
+            if(!_isInitialized) 
+            {
+                Initialize();
+            }
+        }
 
-            if (!_isInitialized) 
-            {
-                //DontDestroyOnLoad(gameObject);
-                _isInitialized = true;
-                _instance.OnAwake();
-            }
+        private void Initialize()
+        {
+            if(persistAcrossScenes) DontDestroyOnLoad(gameObject);
+            
+            _isInitialized = true;
+            _instance.OnLoad();
         }
 
         protected void OnDestroy()
@@ -82,7 +96,7 @@ namespace MyBase.Singleton
         /// This function is called when the instance is used the first time
         /// Put all the initializations you need here, as you would do in Awake
         /// </summary>
-        public virtual void OnAwake(){}
+        public virtual void OnLoad(){}
     
         /// Make sure the instance isn't referenced anymore when the user quit, just in case.
         private void OnApplicationQuit()

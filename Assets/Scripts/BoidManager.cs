@@ -12,6 +12,7 @@ using Cysharp.Net.Http;
 using System.Net.Http;
 using System.Net.WebSockets;
 using MyBase.ApplicationEventManager;
+using UnityEngine.Networking;
 
 public class BoidManager : MonoBehaviour {
 

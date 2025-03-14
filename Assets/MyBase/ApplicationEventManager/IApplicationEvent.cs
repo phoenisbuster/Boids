@@ -6,9 +6,9 @@ using UnityEngine;
 
 namespace MyBase.ApplicationEventManager
 {
-    public interface IApplicationEvent
+    public class IApplicationEvent
     {
-        void Reset();
+
     }
 
     public class ApplicationEvent
