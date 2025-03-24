@@ -13,6 +13,7 @@ using System.Net.Http;
 using System.Net.WebSockets;
 using MyBase.ApplicationEventManager;
 using UnityEngine.Networking;
+using System.Linq;
 
 public class BoidManager : MonoBehaviour {
 
@@ -36,6 +37,92 @@ public class BoidManager : MonoBehaviour {
             }
         };
         return headers;
+    }
+
+    public int LengthOfLongestSubstring(string s) 
+    {
+        if(s.Length <= 0) return 0;
+        if(s.Length == 1) return 1;
+        
+        int max = 0;
+        int idx = 0;
+        Dictionary<char, int> map = new();
+        for (int i = idx; i < s.Length; i++)
+        {
+            if(map.ContainsKey(s[i]))
+            {
+                if(map.Count > max)
+                {
+                    max = map.Count;
+                }
+                map.Clear();
+                i = ++idx;
+            }
+            else
+            {
+                map.Add(s[i], i);
+            }
+        }
+        return max;
+    }
+
+    public void SortColors(int[] nums) {
+        var i = 0;
+        var left = 0;
+        var right = nums.Length - 1;
+
+        while(i < right)
+        {
+            if(nums[left] == 0)
+            {
+                (nums[i], nums[left]) = (nums[left], nums[i]);
+                left++;
+            }
+
+            if(right == 2)
+            {
+                (nums[i], nums[right]) = (nums[right], nums[i]);
+                right--;
+            }
+
+            i++;
+        }
+    }
+
+    public int[] ProductExceptSelf(int[] nums) {
+        int[] result = new int[nums.Length];
+        result[0] = 1;
+        for (int i = 1; i < nums.Length; i++)
+        {
+            result[i] = result[i - 1] * nums[i - 1];
+        }
+        int right = 1;
+        for (int i = nums.Length - 1; i >= 0; i--)
+        {
+            result[i] *= right;
+            right *= nums[i];
+        }
+        return result;
+    }
+
+    private void PrintList(List<int> list)
+    {
+        string s = "" + list.Count + ": ";
+        foreach(var item in list)
+        {
+            s += " " + item;
+        }
+        Debug.LogError(s);
+    }
+
+    private void PrintArray(int[] list)
+    {
+        string s = "" + list.Length + ": ";
+        foreach(var item in list)
+        {
+            s += " " + item;
+        }
+        Debug.LogError(s);
     }
 
     void Start () 
@@ -63,6 +150,8 @@ public class BoidManager : MonoBehaviour {
         Invoke(nameof(OnOffline3), 40);
 
         BoidManagerAction?.Invoke(true);
+
+        SortColors(new int[]{2,0,2,1,1,0});
     }
 
     private void EmitMesh()

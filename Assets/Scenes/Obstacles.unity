@@ -1877,6 +1877,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673013371}
+  - component: {fileID: 1673013372}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -1901,6 +1902,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1673013372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673013370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a296a1c51da5d49c18d28f70f508a966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persistAcrossScenes: 0
+  bundles:
+    keys:
+    - MyBundle
+    values:
+    - BundlePath: MyBundleMyBundle
+      IsRemote: 1
 --- !u!1001 &1831656699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2046,6 +2066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1840281954}
+  - component: {fileID: 1840281955}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -2072,6 +2093,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -23.067, y: 0, z: 0}
+--- !u!114 &1840281955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840281953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a296a1c51da5d49c18d28f70f508a966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persistAcrossScenes: 1
+  bundles:
+    keys: []
+    values: []
 --- !u!1 &1879700682
 GameObject:
   m_ObjectHideFlags: 0
