@@ -1914,13 +1914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a296a1c51da5d49c18d28f70f508a966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  persistAcrossScenes: 0
-  bundles:
-    keys:
-    - MyBundle
-    values:
-    - BundlePath: MyBundleMyBundle
-      IsRemote: 1
+  persistAcrossScenes: 1
 --- !u!1001 &1831656699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2106,9 +2100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   persistAcrossScenes: 1
-  bundles:
-    keys: []
-    values: []
 --- !u!1 &1879700682
 GameObject:
   m_ObjectHideFlags: 0
